@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 
 //Routes
 app.get('/', (req, res) => {
-  res.send('You are using Algolisted APIs. - a Atanu Nayak production');
+  res.send('Last API update : 11 Jan 2022');
 });
 
 app.use('/auth', require('./Routers/router_auth'));
