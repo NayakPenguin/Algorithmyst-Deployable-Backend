@@ -12,13 +12,15 @@ require("dotenv").config({
   path: "./config.env",
 });
 app.use(cookieParser());
+
 const corsOptions = {
-  origin: "*", // Allow requests from any origin
-  // origin: "http://localhost:3000",
-  credentials: true, //access-control-allow-credentials:true
+  origin: ["http://localhost:3000", "https://algolisted.com"],
+  credentials: true,
   optionSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
+
 app.set("trust proxy", 1);
 app.use(express.static("uploads"));
 //Middlewares
