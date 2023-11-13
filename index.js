@@ -13,8 +13,8 @@ require("dotenv").config({
 });
 app.use(cookieParser());
 const corsOptions = {
-  origin: "*", // Allow requests from any origin
-  // origin: "http://localhost:3000",
+  // origin: "*", // Allow requests from any origin
+  origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -28,7 +28,7 @@ app.use(morgan("dev"));
 
 //Routes
 app.get("/", (req, res) => {
-  res.send("You are using Algolisted APIs. - a Atanu Nayak production | Last Update : 13 Nov 2023");
+  res.send("You are using Algolisted APIs. - a Atanu Nayak production | Last Update : 13 Nov 2023 - M3");
 });
 
 app.use("/auth", require("./Routers/router_auth"));
